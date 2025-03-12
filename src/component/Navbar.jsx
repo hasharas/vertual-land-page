@@ -48,19 +48,30 @@ const Navbar = () => {
                                     </button>
                               </div>
                         </div>
-                        <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center itrm-center lg:hidden">
-                              <ul>
+                        {isOpen &&
+                              <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
+                                    <ul>
 
-                                    {navItems.map((item, index) => (
-                                          <li key={index}>
-                                                <a href={item.href}>{item.label}</a>
-                                          </li>
-                                    ))
+                                          {navItems.map((item, index) => (
+                                                <li key={index} className='py-4 '>
+                                                      <a href={item.href} className="hover:text-orange-500">{item.label}</a>
+                                                </li>
+                                          ))
 
-                                    }
+                                          }
 
-                              </ul>
-                        </div>
+                                    </ul>
+                                    <div className='flex space-x-6'>
+                                          <a href="#" className='py-2 px-3 border rounded-md hover:text-orange-500'>
+                                                Sign In
+                                          </a>
+                                          <a href="#" className='bg-gradient-to-r from-orange-500 to-orange-800 py-2 px-3 rounded-md'>
+                                                Create an account
+                                          </a>
+
+                                    </div>
+                              </div>
+                        }
                   </div>
             </nav>
       );
