@@ -11,6 +11,15 @@ const Hero = () => {
                               {" "} for developers
                         </span>
                   </h1>
+                  <p className='mt-10 text-center text-lg text-neutral-500 max-w-4xl'>
+                        Experience simplicity and innovation in one place. Explore seamless solutions designed to enhance your journey with efficiency, reliability, and ease.
+                  </p>
+                  <div className="flex justify-center my-10">
+                        <a href="" className='bg-gradient-to-r from-orange-500 to-orange-800 py-3 px-4 mx-3 rounded-md'>
+                              Start to Free
+                        </a>
+                        <a href="" className='py-3 px-4 mx-3 rounded-md border'>Documentation</a>
+                  </div>
             </div>
       );
 }
