@@ -22,7 +22,7 @@ const Navbar = () => {
                                           My-Land
                                     </span>
                               </div>
-                              <ul className='hidden md:flex ml-14 space-x-12'>
+                              <ul className='hidden lg:flex ml-14 space-x-12'>
 
                                     {navItems.map((item, index) => (
 
