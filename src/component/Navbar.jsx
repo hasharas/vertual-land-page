@@ -1,8 +1,17 @@
 import React from 'react';
 import Logo from '../assets/logo.png';
-import { navItems } from '../constants/index'
+import { navItems } from '../constants/index';
+import { Menu, X } from "lucide-react";
+import { useState } from 'react';
 
 const Navbar = () => {
+
+      const [isOpen, setIsOpen] = useState(false);
+
+      const toggleNavbar = () => {
+            setIsOpen(!isOpen);
+      }
+
       return (
             <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg  border-b border-neutral-700/80">
                   <div className="container px-4 mx-auto relative text-sm">
@@ -33,6 +42,24 @@ const Navbar = () => {
                                           Create an account
                                     </a>
                               </div>
+                              <div className="lg:hidden md:flex flex-col justify-end">
+                                    <button onClick={toggleNavbar}>
+                                          {isOpen ? <X /> : <Menu />}
+                                    </button>
+                              </div>
+                        </div>
+                        <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center itrm-center lg:hidden">
+                              <ul>
+
+                                    {navItems.map((item, index) => (
+                                          <li key={index}>
+                                                <a href={item.href}>{item.label}</a>
+                                          </li>
+                                    ))
+
+                                    }
+
+                              </ul>
                         </div>
                   </div>
             </nav>
