@@ -1,6 +1,6 @@
 import React from 'react';
 // import { CheckCircle2 } from 'lucide-react';
-// import codeImg from "../assets/code.png";
+import codeImg from "../assets/code.png";
 
 const WorkFlor = () => {
       return (
@@ -10,7 +10,11 @@ const WorkFlor = () => {
                               Explore your </span>
                         codeing workflow.
                   </h2>
-
+                  <div className="flex flex-wrap justify-center">
+                        <div className="p-2 w-full lg:w-1/2">
+                              <img src={codeImg} alt="" />
+                        </div>
+                  </div>
             </div>
       );
 }
