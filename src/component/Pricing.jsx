@@ -21,8 +21,23 @@ const Pricing = () => {
                                                 )}
                                           </p>
                                           <p className='mb-8'>
-
+                                                <span className='text-5xl mt-6 mr-2'>{option.price}</span>
+                                                <span className='text-neutral-400 tracking-tighter'>/Month</span>
                                           </p>
+                                          <ul >
+                                                {option.features.map((feture, index) => (
+                                                      <li key={index} className='mt-8 flex items-center'>
+
+                                                            <CheckCircle2 />
+                                                            <span className='ml-2'>{feture} </span>
+                                                      </li>
+                                                ))}
+                                          </ul>
+                                          <a href="#" className='inline-flex justify-center items-center text-center w-full h-12 p-5 mt-20 tracking-tight text-xl 
+                                          hover:bg-orange-900 border border-orange-900 rounded-lg transition duration-200'>
+                                                Subscribe
+
+                                          </a>
                                     </div>
                               </div>
                         ))}
