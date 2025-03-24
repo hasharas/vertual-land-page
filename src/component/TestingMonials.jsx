@@ -10,7 +10,19 @@ const TestingMonials = () => {
                   <div className="flex flex-wrap justify-center">
                         {testimonials.map((testingmonial, index) => (
                               <div key={index} className='w-full sm:w-1/2 lg:w-1/3 px-4 py-2'>
-                                    <div className='bg-neutral rounded-md p-6 text-md border border-neutral-50'></div>
+                                    <div className='bg-neutral rounded-md p-6 text-md border border-neutral-800 font-thin'>
+                                          <p>{testingmonial.text}</p>
+                                          <div className="flex mt-8 item-center">
+                                                <img src={testingmonial.image}
+                                                      alt={testingmonial.user}
+                                                      className='w-12 h-12 mr-6 rounded-full border border-neutral-300' />
+
+                                                <div >
+                                                      <h6>{testingmonial.user}</h6>
+                                                      <span className='text-sm font-sm font-normal italic text-neutral-600'>{testingmonial.company}</span>
+                                                </div>
+                                          </div>
+                                    </div>
                               </div>
                         ))
 
