@@ -4,6 +4,7 @@ import Hero from './component/Hero';
 import Feature from './component/Feature';
 import WorkFlor from './component/WorkFlor';
 import Pricing from './component/Pricing';
+import TestingMonials from './component/TestingMonials';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Feature />
         <WorkFlor />
         <Pricing />
+        <TestingMonials />
       </div>
     </>
   );
